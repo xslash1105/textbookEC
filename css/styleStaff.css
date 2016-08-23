@@ -1,0 +1,125 @@
+#menubar{
+  height: 100%;
+  width: 15%;
+  background: linear-gradient(to bottom right, rgb(180, 180, 180), rgb(230, 230, 230), rgb(180, 180, 180));
+  position: fixed;
+}
+/*#menubar:hover{
+  background: linear-gradient(to bottom, rgb(0, 100, 200), rgb(0, 150, 250), rgb(0, 100, 150));
+}*/
+
+#userContainer{
+  height: auto;
+  position: relative;
+  top: 8px;
+  text-align: center;
+}
+#userContainer table{
+  width: 50%;
+  margin: 0 auto;
+  font-weight: bold;
+  font-size: 14px;
+  font-family: times;
+  color: rgb(0, 50, 100);
+}
+
+#icon{
+  height: 40px;
+  width: 40px;
+  margin: 0 auto;
+  display: table;
+  border-radius: 50%;
+}
+
+#searchContainer{
+  height: 40px;
+  padding-top: 10px;
+  text-align: center;
+  position: relative;
+  top: 0px;
+}
+.search{
+  height: auto;
+  width: 80%;
+  font-family: times;
+  font-size: 13px;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+#searchButton:focus{
+  outline: none;
+}
+
+#menuList{
+  position: relative;
+  top: 35px;
+}
+#menuList a{
+  text-decoration: none;
+}
+
+#menuList li{
+  height: 50px;
+  padding-top: 18px;
+  font-weight: bold;
+  font-size: 14px;
+  font-family: times;
+  color: rgb(0, 50, 100);
+  text-align: center;
+  display: block;
+  cursor: pointer;
+}
+#menuList li:hover{
+  color: white;
+  background: rgba(0, 80, 100, 0.5);
+}
+#menuList li:active{
+  background: rgba(0, 120, 140, 0.5);
+}
+
+#menuIcon{
+  width: 100%;
+  text-align: center;
+  position: relative;
+  bottom: -40px;
+}
+#menuIcon h3{
+  font-weight: 900;
+  color: rgb(0, 50, 100);
+  font-family: times new roman;
+  font-style: italic;
+  font-size: 20px;
+}
+
+/*-------------------------------------------
+modal in */
+
+#modal_in{
+  height: auto;
+  width: 70%;
+  padding: 20px 30px;
+  border: 2px solid grey;
+  background: linear-gradient(to bottom right, rgb(180, 180, 180), rgb(230, 230, 230), rgb(180, 180, 180));
+  /*background: rgb(200, 200, 200);*/
+  border-radius: 5px;
+  z-index: 3;
+  position: fixed;
+  top: 50px;
+  left: 15%;
+  display: none;
+  font-family: times;
+  font-size: 16px;
+}
+
+#modal_overlay{
+  z-index: 2;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  background: rgba(0, 0, 0, 0.75);
+}

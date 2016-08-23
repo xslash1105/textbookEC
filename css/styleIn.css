@@ -1,0 +1,1404 @@
+html{
+  height: 100%;
+}
+body{
+  height: 100%;
+  width: 100%;
+}
+
+/*------------------------------------
+menubar CSS*/
+#menubar{
+  height: 100%;
+  width: 15%;
+  background: linear-gradient(to bottom right, rgb(180, 180, 180), rgb(230, 230, 230), rgb(180, 180, 180));
+  position: fixed;
+}
+
+#userContainer{
+  height: auto;
+  position: relative;
+  top: 8px;
+  text-align: center;
+}
+#userContainer table{
+  width: 50%;
+  margin: 0 auto;
+  font-weight: bold;
+  font-size: 14px;
+  font-family: times;
+  color: rgb(0, 50, 100);
+}
+
+#icon{
+  height: 40px;
+  width: 40px;
+  margin: 0 auto;
+  display: table;
+  border-radius: 50%;
+}
+
+#searchContainer{
+  height: 40px;
+  padding-top: 10px;
+  text-align: center;
+  position: relative;
+  top: 0px;
+}
+.search{
+  height: auto;
+  width: 80%;
+  font-family: times;
+  font-size: 13px;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+#searchButton:focus{
+  outline: 0;
+}
+
+#menuList{
+  position: relative;
+  top: 35px;
+}
+
+#menuList a{
+  text-decoration: none;
+}
+
+#menuList li{
+  height: 50px;
+  padding-top: 18px;
+  font-weight: bold;
+  font-size: 14px;
+  font-family: times;
+  color: rgb(0, 50, 100);
+  text-align: center;
+  display: block;
+  cursor: pointer;
+}
+#menuList li:hover{
+  color: white;
+  background: rgba(0, 80, 100, 0.5);
+}
+#menuList li:active{
+  background: rgba(0, 120, 140, 0.5);
+}
+
+#menuIcon{
+  width: 100%;
+  text-align: center;
+  position: relative;
+  bottom: -40px;
+}
+#menuIcon h3{
+  font-weight: 900;
+  color: rgb(0, 50, 100);
+  font-family: times new roman;
+  font-style: italic;
+  font-size: 20px;
+}
+
+/*-------------------------------------------
+modal in */
+
+#modal_in{
+  height: auto;
+  max-height: 500px;
+  width: 50%;
+  padding: 20px 30px;
+  border: 2px solid grey;
+  background: linear-gradient(to bottom right, rgb(180, 180, 180), rgb(230, 230, 230), rgb(180, 180, 180));
+  /*background: rgb(200, 200, 200);*/
+  border-radius: 5px;
+  z-index: 3;
+  position: fixed;
+  top: 80px;
+  left: 30%;
+  display: none;
+  font-family: times;
+  font-size: 16px;
+  overflow-y: auto;
+}
+
+#modal_in::-webkit-scrollbar{
+  overflow:hidden;
+  width:3px;
+  background:#fafafa;
+}
+#modal_in::-webkit-scrollbar-button{
+  display:none;
+}
+#modal_in::-webkit-scrollbar-track{
+  background:#eee;
+}
+#modal_in::-webkit-scrollbar-track-piece{
+  background:#eee;
+}
+#modal_in::-webkit-scrollbar-thumb{
+  background:#333;
+}
+#modal_in::-webkit-scrollbar-corner{
+  background:#333;
+}
+
+#modal_overlay{
+  z-index: 2;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  background: rgba(0, 0, 0, 0.75);
+}
+
+#settings{
+  position: relative;
+  margin: 5px;
+}
+#settings ul{
+  padding-top: 20px;
+}
+#settings li{
+  height: 50px;
+  color: rgb(0, 50, 100);
+  font-size: 16px;
+  font-family: Arial;
+  font-weight: bold;
+  text-shadow: rgb(180, 180, 180) 2px 2px;
+  padding-top: 15px;
+  cursor: pointer;
+}
+#settings li:hover{
+  color: white;
+  text-decoration: underline;
+}
+#settings li:active{
+  color: rgb(0, 50, 100);
+}
+
+/*------------------------------------
+changing user information*/
+#userChangeContainer{
+  width: 60%;
+  margin: 0 auto;
+  position: relative;
+  top: 50px;
+  padding: 20px 30px;
+  border: 2px solid grey;
+  border-radius: 10px;
+  background: linear-gradient(to bottom right, rgb(180, 180, 180), rgb(230, 230, 230), rgb(180, 180, 180));
+  max-height: 500px;
+  overflow: auto;
+}
+
+#userChangeContainer::-webkit-scrollbar{
+  overflow:hidden;
+  width:3px;
+  background:#fafafa;
+}
+#userChangeContainer::-webkit-scrollbar-button{
+  display:none;
+}
+#userChangeContainer::-webkit-scrollbar-track{
+  background:#eee;
+}
+#userChangeContainer::-webkit-scrollbar-track-piece{
+  background:#eee;
+}
+#userChangeContainer::-webkit-scrollbar-thumb{
+  background:#333;
+}
+#userChangeContainer::-webkit-scrollbar-corner{
+  background:#333;
+}
+
+#changeUsername, #changeEmail, #changePassword{
+  min-height: 80px;
+}
+
+.formdl{
+  height: auto;
+  width: 100%;
+}
+.formdl dt{
+  width: 100%;
+  margin: 5px 0;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: Arial;
+  text-shadow: rgb(180, 180, 180) 2px 2px;
+}
+
+.formTitle{
+  font-size: 25px;
+  color: white;
+  font-weight: bold;
+  border-bottom: 1px solid grey;
+  text-shadow: rgb(180, 180, 180) 2px 2px;
+}
+
+.changeLabelTitle{
+  font-size: 20px;
+  font-family: Arial;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: rgb(180, 180, 180) 2px 2px;
+  text-align: center;
+}
+
+.input{
+  height: auto;
+  width: 90%;
+  padding: 7px;
+  border-radius: 5px;
+  border: 1px solid rgb(200, 200, 200);
+}
+
+.hiddenInput{
+  display: none;
+}
+
+.formButton{
+  height: 30px;
+  width: 50%;
+  border: 1px solid rgb(200, 200, 200);
+  border-radius: 5px;
+  background: linear-gradient(to bottom, rgb(220, 220, 220), rgb(160, 160, 160));
+  cursor: pointer;
+}
+.formButton:hover{
+  background: linear-gradient(to bottom, rgb(240, 240, 240), rgb(180, 180, 180));
+  color: white;
+}
+.formButton:active{
+  background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(195, 195, 195));
+}
+.formButton:focus{
+  outline: none;
+}
+
+.formButtondt{
+  padding-top: 10px;
+  text-align: center;
+}
+
+.unavailable{
+  color: red;
+  font-weight: bold;
+}
+
+.available{
+  color: green;
+  font-weight: bold;
+}
+
+.changedMessageok, .changedMessageng{
+  display: block;
+  width: 80%;
+  margin: 60px auto 0;
+  font-size: 25px;
+  font-weight: bold;
+  border-bottom: 1px solid grey;
+  text-shadow: rgb(180, 180, 180) 2px 2px;
+  text-align: center;
+}
+
+.changedMessageok{
+  color: rgb(0, 50, 100);
+}
+
+.changedMessageng{
+  color: rgb(200, 50, 0);
+}
+
+#upload_modal_in{
+  height: auto;
+  min-height: 300px;
+  max-height: 500px;
+  width: 50%;
+  padding: 30px 10px;
+  border: 2px solid grey;
+  background: linear-gradient(to bottom right, rgb(180, 180, 180), rgb(230, 230, 230), rgb(180, 180, 180));
+  /*background: rgb(200, 200, 200);*/
+  border-radius: 5px;
+  z-index: 3;
+  position: fixed;
+  top: 130px;
+  left: 30%;
+  display: none;
+  font-family: times;
+  font-size: 16px;
+  overflow-y: auto;
+}
+
+#modal_overlay_upload{
+  z-index: 2;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  background: rgba(0, 0, 0, 0.75);
+}
+
+#uploadedIcon{
+  display: block;
+  height: 150px;
+  width: 150px;
+  margin: 20px auto;
+  border-radius: 50%;
+}
+/*------------------------------------------------
+main page*/
+
+#backgroundContainer{
+  height: 100%;
+  width: 85%;
+  position: relative;
+  left: 15%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#titleContainer{
+  height: auto;
+  width: 40%;
+  margin: auto;
+  padding: 20px 0;
+  background: rgba(0, 0, 0, 0.3);
+  text-align: center;
+  z-index: 1;
+  position: relative;
+  top: 150px;
+  line-height: 50px;
+  overflow: hidden;
+  display: none;
+}
+
+.title{
+  font-size: 40px;
+  color: rgb(0, 80, 130);
+  text-shadow: white 2px 2px;
+  font-weight: bold;
+  letter-spacing: 10px;
+}
+
+.subTitle{
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: times;
+  text-align: justify;
+  text-shadow: rgb(180, 180, 180) 2px 2px;
+  letter-spacing: 2px;
+}
+
+#custom-search-input{
+    width: 90%;
+    margin: 10px auto 0;
+    border: solid 1px #E4E4E4;
+    border-radius: 6px;
+    background-color: #fff;
+    position: relative;
+}
+
+#titleContainer #custom-search-input{
+  margin-top: 20px;
+}
+
+#custom-search-input input{
+    border: 0;
+    box-shadow: none;
+}
+
+#custom-search-input button{
+    margin: 2px 0 0 0;
+    background: none;
+    box-shadow: none;
+    border: 0;
+    color: #666666;
+    padding: 0 8px 0 10px;
+    border-left: solid 1px #ccc;
+}
+
+#custom-search-input button:hover{
+    border: 0;
+    box-shadow: none;
+    border-left: solid 1px #ccc;
+}
+
+#custom-search-input .glyphicon-search{
+    font-size: 16px;
+}
+
+
+/*----------------------------------------------
+Item List page*/
+
+#facultyItemContainer{
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+  top: 20px;
+  padding: 20px 30px;
+  border: 2px solid grey;
+  border-radius: 10px;
+  background: linear-gradient(to bottom right, rgb(180, 180, 180), rgb(230, 230, 230), rgb(180, 180, 180));
+  max-height: 600px;
+}
+
+#departmentItemContainer{
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+  top: 20px;
+  padding: 20px 30px;
+  border: 2px solid grey;
+  border-radius: 10px;
+  background: linear-gradient(to bottom right, rgb(180, 180, 180), rgb(230, 230, 230), rgb(180, 180, 180));
+  max-height: 600px;
+}
+
+#itemTopContainer{
+  height: 100px;
+  width: 100%;
+  border-bottom: 1px solid grey;
+  position: relative;
+}
+
+#selectBarContainer{
+  position: relative;
+  top: 15px;
+}
+
+.itemPageJumpButton{
+  height: 40px;
+  width: auto;
+  min-width: 100px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  background: rgba(255, 255, 255, 0.3);
+}
+.itemPageJumpButton:hover{
+  background: rgba(255, 255, 255, 0.8);
+}
+
+#itemBottomContainer{
+  height: 420px;
+  width: 100%;
+  position: relative;
+}
+
+#itemListContainer{
+  height: 350px;
+  width: auto;
+  overflow: auto;
+}
+
+#itemListContainer::-webkit-scrollbar{
+  overflow:hidden;
+  width:2px;
+  background:#fafafa;
+}
+#itemListContainer::-webkit-scrollbar-button{
+  display:none;
+}
+#itemListContainer::-webkit-scrollbar-track{
+  background:#eee;
+}
+#itemListContainer::-webkit-scrollbar-track-piece{
+  background:#eee;
+}
+#itemListContainer::-webkit-scrollbar-thumb{
+  background:#333;
+}
+#itemListContainer::-webkit-scrollbar-corner{
+  background:#333;
+}
+
+#itemListWhole{
+  width: 90%;
+  margin: 20px auto 20px;
+}
+
+.itemList_EachContainer{
+  min-height: 300px;
+  max-height: 300px;
+  width: 30%;
+  border: 1px solid grey;
+  border-radius: 5px;
+  background: #fff;
+  margin: 0 10px 20px;
+  float: left;
+  cursor: pointer;
+}
+.itemList_EachContainer:hover{
+  border: 1px solid #fff;
+}
+
+.itemList_EachImg{
+  height: 150px;
+  max-height: 200px;
+  width: 100%;
+  display: block;
+  border-radius: 4px 4px 0 0;
+  position: relative;
+  background: linear-gradient(to bottom right, rgba(0, 100, 150, 0.2), rgba(0, 150, 200, 0.5));
+}
+
+.itemList_EachTitle{
+  height: auto;
+  width: 100%;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  font-size: 14px;
+  overflow: eclipse;
+}
+
+.itemList_EachInfo{
+  width: 90%;
+  margin: 0 auto;
+  display: inline-block;
+  position: relative;
+  text-align: right;
+  font-size: 14px;
+}
+
+#listItemMessage{
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  top: 100px;
+  display: block;
+  text-align: center;
+  text-shadow: rgb(180, 180, 180) 2px 2px;
+  color: rgb(0, 100, 150);
+}
+
+.textBookUnavailable{
+  margin: 0 0 20px;
+}
+
+.discount{
+  color: red;
+}
+
+/*-----------------------------------------------
+item page */
+
+#itemPageContainer{
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+  top: 20px;
+  padding: 20px 10px;
+  border: 2px solid grey;
+  border-radius: 10px;
+  background: linear-gradient(to bottom right, rgb(180, 180, 180), rgb(230, 230, 230), rgb(180, 180, 180));
+  max-height: 550px;
+  min-height: 550px;
+}
+
+#itemPageTopContainer{
+  height: 50px;
+  width: 100%;
+  position: relative;
+  text-align: right;
+  border-bottom: 1px solid grey;
+
+}
+
+#itemPageBottomContainer{
+}
+#itemWhole{
+  height: 100%;
+  position: relative;
+}
+#itemContainer{
+  height: 100%;
+  width: 90%;
+  margin: auto;
+  position: relative;
+  top: 10px;
+}
+
+#item_leftContainer{
+  position: relative;
+  top: 50px;
+  float: left;
+  width: 400px;
+  height: 300px;
+}
+#item_rightContainer{
+  position: relative;;
+  float: right;
+  width: 50%;
+  height: 100%;
+  text-align: right;
+  padding-right: 10px;
+  overflow: auto;
+}
+#item_rightContainer::-webkit-scrollbar{
+  overflow:hidden;
+  width:2px;
+  background:#fafafa;
+}
+#item_rightContainer::-webkit-scrollbar-button{
+  display:none;
+}
+#item_rightContainer::-webkit-scrollbar-track{
+  background:#eee;
+}
+#item_rightContainer::-webkit-scrollbar-track-piece{
+  background:#eee;
+}
+#item_rightContainer::-webkit-scrollbar-thumb{
+  background:#333;
+}
+#item_rightContainer::-webkit-scrollbar-corner{
+  background:#333;
+}
+
+
+#item_Title{
+  font-size: 30px;
+  text-align: left;
+}
+#titleBorder{
+  display: block;
+  width: 50%;
+  border-bottom: 1px solid grey;
+}
+
+#item_InfoTable{
+  position: relative;
+  float: right;
+  width: 80%;
+  font-size: 16px;
+  font-family: times;
+}
+#item_InfoTable tr{
+  line-height: 30px;
+}
+#item_InfoTable th{
+  font-weight: bold;
+  color: rgb(0, 50, 100);
+}
+
+#item_InfoTable a{
+  color: rgb(0, 100, 150);
+}
+#item_InfoTable a:hover{
+  color: rgb(0, 150, 200);
+}
+#item_InfoTable a:active{
+  color: rgb(0, 100, 150);
+}
+
+.item_Info{
+  color: rgb(0, 120, 180);
+  font-size: 16px;
+}
+
+#modal_explanation_open{
+  color: rgb(0, 100, 150);
+  cursor: pointer;
+}
+#modal_explanation_open:hover{
+  color: rgb(0, 150, 200);
+  text-decoration: underline;
+}
+#modal_explanation_open:active{
+  color: rgb(0, 100, 150);
+}
+
+#modal_explanation{
+  height: auto;
+  max-height: 500px;
+  width: 50%;
+  padding: 20px 30px;
+  border: 2px solid grey;
+  background: linear-gradient(to bottom right, rgb(180, 180, 180), rgb(230, 230, 230), rgb(180, 180, 180));
+  /*background: rgb(200, 200, 200);*/
+  border-radius: 5px;
+  z-index: 3;
+  position: fixed;
+  top: 80px;
+  left: 30%;
+  display: none;
+  font-family: times;
+  font-size: 16px;
+}
+
+#itemModalScroll{
+  height: 350px;
+  position: relative;
+  top: 10px;
+  width: auto;
+  overflow-y: auto;
+}
+
+#itemModalScroll::-webkit-scrollbar{
+  overflow:hidden;
+  width:2px;
+  background:#fafafa;
+}
+#itemModalScroll::-webkit-scrollbar-button{
+  display:none;
+}
+#itemModalScroll::-webkit-scrollbar-track{
+  background:#eee;
+}
+#itemModalScroll::-webkit-scrollbar-track-piece{
+  background:#eee;
+}
+#itemModalScroll::-webkit-scrollbar-thumb{
+  background:#333;
+}
+#itemModalScroll::-webkit-scrollbar-corner{
+  background:#333;
+}
+
+#modal_explanation_overlay{
+  z-index: 2;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  background: rgba(0, 0, 0, 0.75);
+}
+
+#itemExplanationmodal{
+  min-height: 400px;
+  max-height: 400px;
+}
+
+#explanationText{
+  line-height: 30px;
+  font-size: 16px;
+  font-family: Arial;
+  color: rgb(0, 50, 100);
+}
+
+.ratingStar{
+  color: yellow;
+  text-shadow: grey 1px 1px;
+}
+.ratingStar1{
+  color: red;
+  text-shadow: grey 1px 1px;
+}
+
+
+#addToCartButton{
+  height: 40px;
+  width: 45%;
+  margin: auto;
+  background: linear-gradient(to bottom, rgb(0, 130, 170), rgb(0, 80, 130));
+  border: none;
+  border-radius: 5px;
+  color: rgba(255, 255, 255, 0.7);
+  text-shadow: grey 1px 1px;
+  font-family: times;
+}
+#addToCartButton:hover{
+  background: linear-gradient(to bottom, rgb(0, 180, 220), rgb(0, 100, 150));
+}
+
+.purchaseButton{
+  height: 40px;
+  width: 45%;
+  margin: auto;
+  background: linear-gradient(to bottom, rgb(255, 148, 77), rgb(255, 102, 0));
+  border: none;
+  border-radius: 5px;
+  color: rgba(255, 255, 255, 0.7);
+  text-shadow: grey 1px 1px;
+  font-family: times;
+}
+.purchaseButton:hover{
+  background: linear-gradient(to bottom, rgb(255, 179, 128), rgb(255, 133, 51));
+}
+
+/*--------------------------------------
+購入画面*/
+
+#modal_purchase{
+  height: auto;
+  width: auto;
+  min-width: 500px;
+  max-width: 800px;
+  padding: 20px 30px;
+  margin: auto;
+  border: 2px solid grey;
+  background: linear-gradient(to bottom right, rgb(180, 180, 180), rgb(230, 230, 230), rgb(180, 180, 180));
+  border-radius: 5px;
+  z-index: 3;
+  position: fixed;
+  left: auto;
+  display: none;
+  font-family: times;
+  font-size: 16px;
+}
+
+#itemPurchasemodal{
+  position: relative;
+  min-height: 300px;
+}
+#itemPurchaseExplain{
+  width: 50%;
+  float: left;
+  padding: 10px;
+}
+#purchaseForm{
+  width: 50%;
+  float: left;
+  border-left: 1px solid grey;
+  padding: 10px;
+}
+
+#modal_purchase_overlay{
+  z-index: 2;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.readonly{
+  background: #ffffe6;
+}
+#purchasedd{
+  text-align: center;
+}
+
+.purchaseMessage{
+  margin: 100px auto 0;
+}
+
+
+/*------------------------------------
+contact page css*/
+
+#contactContainer{
+  height: auto;
+  width: 80%;
+  margin: auto;
+  padding: 20px 0 30px;
+  background: linear-gradient(to bottom right, rgb(180, 180, 180), rgb(230, 230, 230), rgb(180, 180, 180));
+  border-radius: 5px;
+  /*background: rgba(0, 0, 0, 0.3);*/
+  text-align: center;
+  z-index: 1;
+  position: relative;
+  top: 50px;
+  line-height: 50px;
+  overflow: hidden;
+}
+
+#contactTitle{
+  font-size: 25px;
+  color: white;
+  font-weight: bold;
+  text-align: left;
+  margin: 0 20px;
+  border-bottom: 1px solid grey;
+  text-shadow: rgb(180, 180, 180) 2px 2px;
+}
+
+#contactListContainer{
+  height: 400px;
+  width: 30%;
+  background: #fff;
+  float: left;
+  position: relative;
+  left: 5%;
+  top: 10px;
+  border-radius: 5px;
+  border: 1px solid rgb(200, 200, 200);
+}
+
+.senderListEach{
+  height: auto;
+  width: 100%;
+  font-family: Arial;
+  font-weight: bold;
+  background: none;
+  border: none;
+}
+.senderListEach:hover{
+  color: white;
+  background: rgba(0, 50, 100, 0.5);
+}
+
+#messageContainer{
+  height: 400px;
+  width: 55%;
+  float: right;
+  background: #fff;
+  position: relative;
+  right: 5%;
+  top: 10px;
+  border-radius: 5px;
+  border: 1px solid rgb(200, 200, 200);
+}
+
+#messageScreen{
+  height: 260px;
+  position: relative;
+  overflow-y: auto;
+}
+#messageScreen::-webkit-scrollbar{
+  overflow:hidden;
+  width:2px;
+  background:#fafafa;
+}
+#messageScreen::-webkit-scrollbar-button{
+  display:none;
+}
+#messageScreen::-webkit-scrollbar-track{
+  background:#eee;
+}
+#messageScreen::-webkit-scrollbar-track-piece{
+  background:#eee;
+}
+#messageScreen::-webkit-scrollbar-thumb{
+  background:#333;
+}
+#messageScreen::-webkit-scrollbar-corner{
+  background:#333;
+}
+
+#messageInputContainer{
+  height: auto;
+  position: relative;
+  top: 15px;
+}
+#messageInput{
+  max-height: 70px;;
+  max-width: 90%;
+  height: 70px;
+  width: 90%;
+  border-radius: 5px;
+  line-height: normal;
+  margin-bottom: -20px;
+}
+#messageSendButton{
+  height: 30px;
+  width: 50%;
+  background: linear-gradient(to bottom, rgb(225, 225, 234),rgb(210, 210, 224));
+  border: 1px solid rgb(200, 200, 200);
+}
+#messageSendButton:hover{
+    background: linear-gradient(to bottom, rgba(210, 210, 224, 0.5),rgba(180, 180, 203, 0.5));
+    color: white;
+}
+
+.messageReceiverWrapper {
+    padding: 10px;
+    position: relative;
+}
+
+.messageReceiverBox {
+    display: inline-block;
+    padding: 15px 20px 10px;
+    position: relative;
+    background: #ccc;
+    min-height: 50px;
+    line-height: 20px;
+    height: auto;
+    width: auto;
+    min-width: 100px;
+    max-width: 300px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.messageReceiverBox:after {
+    content: '';
+    position: absolute;
+    border-top: 10px solid #ccc;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    bottom: -9px;
+    left: 10px;
+}
+
+.messageSenderWrapper {
+    padding: 10px;
+    position: relative;
+}
+
+.messageSenderBox {
+    display: inline-block;
+    padding: 15px 20px 10px;
+    position: relative;;
+    background: #ccc;
+    min-height: 50px;
+    line-height: 20px;
+    height: auto;
+    width: auto;
+    min-width: 100px;
+    max-width: 300px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.messageSenderBox:after {
+    content: '';
+    position: absolute;
+    border-top: 10px solid  #ccc;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    bottom: -9px;
+    right: 10px;
+}
+
+#contactListNew{
+  position: relative;
+  height: 150px;
+  overflow-y: auto;
+}
+#contactListNew::-webkit-scrollbar{
+  overflow:hidden;
+  width:2px;
+  background:#fafafa;
+}
+#contactListNew::-webkit-scrollbar-button{
+  display:none;
+}
+#contactListNew::-webkit-scrollbar-track{
+  background:#eee;
+}
+#contactListNew::-webkit-scrollbar-track-piece{
+  background:#eee;
+}
+#contactListNew::-webkit-scrollbar-thumb{
+  background:#333;
+}
+#contactListNew::-webkit-scrollbar-corner{
+  background:#333;
+}
+
+#contactListOld{
+  position: relative;
+  height: 175px;
+  overflow-y: auto;
+}
+#contactListOld::-webkit-scrollbar{
+  overflow:hidden;
+  width:2px;
+  background:#fafafa;
+}
+#contactListOld::-webkit-scrollbar-button{
+  display:none;
+}
+#contactListOld::-webkit-scrollbar-track{
+  background:#eee;
+}
+#contactListOld::-webkit-scrollbar-track-piece{
+  background:#eee;
+}
+#contactListOld::-webkit-scrollbar-thumb{
+  background:#333;
+}
+#contactListOld::-webkit-scrollbar-corner{
+  background:#333;
+}
+
+.contactListTitle{
+  font-weight: bold;
+  text-shadow: grey 1px 1px;
+}
+
+/*------------------------------------------------------
+insert page css*/
+
+#backgroundContainer{
+  height: 100%;
+  width: 85%;
+  position: relative;
+  left: 15%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#insertFormContainer{
+  height: auto;
+  width: 90%;
+  margin: auto;
+  padding: 10px 20px;
+  position: relative;
+  top: 30px;
+  max-height: 600px;
+  background: linear-gradient(to bottom right, rgb(180, 180, 180), rgb(230, 230, 230), rgb(180, 180, 180));
+  border: 1px solid grey;
+  border-radius: 5px;
+  overflow: auto;
+}
+
+#insertFormContainer::-webkit-scrollbar{
+  overflow:hidden;
+  width:2px;
+  background:#fafafa;
+}
+#insertFormContainer::-webkit-scrollbar-button{
+  display:none;
+}
+#insertFormContainer::-webkit-scrollbar-track{
+  background:#eee;
+}
+#insertFormContainer::-webkit-scrollbar-track-piece{
+  background:#eee;
+}
+#insertFormContainer::-webkit-scrollbar-thumb{
+  background:#333;
+}
+#insertFormContainer::-webkit-scrollbar-corner{
+  background:#333;
+}
+
+#insertFormContainer table{
+  height: auto;
+  width: 100%;
+  margin: auto;
+}
+
+#insertFormContainer tr{
+  line-height: 35px;
+}
+#insertFormContainer th{
+  width: auto;
+}
+#insertFormContainer td{
+  width: auto;
+}
+#insertFormContainer select{
+  height: 30px;
+  width: 300px;
+}
+
+#insertTitle{
+  font-size: 30px;
+  text-shadow: grey 2px 2px;
+}
+
+.insertinput{
+  height: 30px;
+  width: 300px;
+  border: none;
+  border-radius: 5px;
+
+  padding: 5px 10px;
+}
+#insertButton{
+  background: linear-gradient(to bottom, rgb(0, 130, 180), rgb(0, 70 ,100));
+}
+#insertButton:hover{
+    background: linear-gradient(to bottom, rgb(0, 150, 200), rgb(0, 90 ,120));
+}
+#insertButton:active{
+    background: linear-gradient(to bottom, rgb(0, 130, 180), rgb(0, 70 ,100));
+}
+#resetButton{
+  background: linear-gradient(to bottom, rgb(220, 80, 0), rgb(150, 50, 0));
+}
+#resetButton:hover{
+  background: linear-gradient(to bottom, rgb(240, 100, 0), rgb(170, 70, 0));
+}
+#resetButton:active{
+  background: linear-gradient(to bottom, rgb(220, 80, 0), rgb(150, 50, 0));
+}
+.insertButton{
+  height: auto;
+  width: 30%;
+  margin: 10px auto;
+  border-radius: 5px;
+  border: 1px solid grey;
+  color: #fff;
+  font-weight: bold;
+}
+.insertButton:hover{
+  background: linear-gradient(to bottom, rgb(220, 220, 220), rgb(170, 170 ,170));
+}
+/*----------------------------------
+selling history*/
+
+#sellHistoryContainer{
+  height: 550px;
+  width: 70%;
+  margin: auto;
+  padding: 20px 20px;
+  position: relative;
+  top: 30px;
+  background: linear-gradient(to bottom right, rgb(180, 180, 180), rgb(230, 230, 230), rgb(180, 180, 180));
+  border: 1px solid grey;
+  border-radius: 5px;
+  overflow-y: scroll;
+}
+#sellHistoryContainer::-webkit-scrollbar{
+  overflow:hidden;
+  width:2px;
+  background:#fafafa;
+}
+#sellHistoryContainer::-webkit-scrollbar-button{
+  display:none;
+}
+#sellHistoryContainer::-webkit-scrollbar-track{
+  background:#eee;
+}
+#sellHistoryContainer::-webkit-scrollbar-track-piece{
+  background:#eee;
+}
+#sellHistoryContainer::-webkit-scrollbar-thumb{
+  background:#333;
+}
+#sellHistoryContainer::-webkit-scrollbar-corner{
+  background:#333;
+}
+
+
+#sellHistoryTitle{
+  font-size: 25px;
+  color: white;
+  font-weight: bold;
+  border-bottom: 1px solid grey;
+  text-shadow: rgb(180, 180, 180) 2px 2px;
+  margin-bottom: 20px;
+}
+
+#sellHistoryBottom{
+  height: auto;
+  min-height: 300px;
+  width: auto;
+  position: relative;
+  border-bottom: 1px solid rgba(50, 50, 50, 0.2);
+  padding: 20px 0;
+}
+.sellHistoryImageContainer{
+  height: auto;
+  width: 50%;
+  float: left;
+  position: relative;
+}
+.sellHistoryImage{
+  height: 250px;
+  width: 350px;
+  margin: auto;
+  display: block;
+}
+
+.sellHistoryInfoContainer{
+  height: 200px;
+  width: 50%;
+  float: left;
+  font-size: 18px;
+}
+.sellHistoryInfoContainer thead{
+  width: 100%;
+
+}
+.sellHistoryInfoContainer caption{
+  height: 40px;
+  width: inherit;
+  font-size: 25px;
+  color: rgb(50, 50, 50);
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.sellHistoryInfoContainer table{
+  width: 100%;
+  line-height: 30px;
+}
+
+.sellHistoryInfoContainer td{
+  width: auto;
+}
+.sellHistoryInfoContainer tfoot th{
+  padding-top: 10px;
+  text-align: center;
+}
+
+/*---------------------------------------
+wanted request */
+
+#requestFormContainer{
+  height: auto;
+  max-height: 600px;
+  min-height: 400px;
+  width: 70%;
+  margin: auto;
+  padding: 10px 20px;
+  position: relative;
+  top: 50px;
+  background: linear-gradient(to bottom right, rgb(180, 180, 180), rgb(230, 230, 230), rgb(180, 180, 180));
+  border: 1px solid grey;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+#requestFormLeft{
+  position: absolute;
+  left: 0;
+  width: 50%;
+  padding: 10px 20px;
+  border-right: 1px solid grey;
+}
+#requestFormRight{
+  position: absolute;
+  right: 0;
+  height: 300px;;
+  width: 50%;
+  padding: 10px 20px;
+  overflow-y: scroll;
+}
+
+#requestButton{
+  display: block;
+  width: 150px;
+  margin: auto;
+}
+
+.eachRequest{
+  height: auto;
+  width: 100%;
+  position: relative;
+  border-bottom: 1px solid grey;
+}
+
+.eachRequestTop{
+  position: relative;
+  top: 0;
+  width: 100%;
+}
+
+.eachRequestBottom{
+  position: relative;
+  text-align: right;
+}
+
+.eachRequestTitle{
+  position: relative;
+  font-size: 24px;
+}
+.eachRequestClass{
+  position: relative;
+  font-size: 16px;
+}
+
+.eachRequestAvailable{
+  position: relative;
+  font-size: 16px;
+}
